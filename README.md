@@ -47,7 +47,13 @@ func createKv(r map[string]string) gokv.RedisIns {
 }
 
 func main() {
-	fmt.Println(tests.BuildKv("user").GetListKey("1", "2"))
+	fmt.Println(tests.BuildKv("user").GetKey("999"))
 	fmt.Println(tests.BuildKv("register").GetListKey("1", "2"))
 }
+```
+
+> go run main.go
+```shell
+k:user:999
+l:u_register:1:2
 ```
